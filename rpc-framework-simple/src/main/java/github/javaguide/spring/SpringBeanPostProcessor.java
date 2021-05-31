@@ -35,6 +35,9 @@ public class SpringBeanPostProcessor implements BeanPostProcessor {
         this.rpcClient = ExtensionLoader.getExtensionLoader(RpcRequestTransport.class).getExtension("netty");
     }
 
+    /**
+     * Spring Bean 在实例化之前会调用 BeanPostProcessor 接口
+     */
     @SneakyThrows
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
@@ -47,6 +50,7 @@ public class SpringBeanPostProcessor implements BeanPostProcessor {
                     .group(rpcService.group())
                     .version(rpcService.version())
                     .service(bean).build();
+            // 发布服务
             serviceProvider.publishService(rpcServiceConfig);
         }
         return bean;

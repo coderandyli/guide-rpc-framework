@@ -17,6 +17,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * 服务提供者，底层调用{@code {@link ServiceRegistry}}
  * @author shuang.kou
  * @createTime 2020年05月13日 11:23:00
  */
@@ -28,6 +29,9 @@ public class ZkServiceProviderImpl implements ServiceProvider {
      * value: service object
      */
     private final Map<String, Object> serviceMap;
+    /**
+     * 已经注册的服务
+     */
     private final Set<String> registeredService;
     private final ServiceRegistry serviceRegistry;
 

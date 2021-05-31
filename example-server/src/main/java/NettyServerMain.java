@@ -22,6 +22,7 @@ public class NettyServerMain {
         RpcServiceConfig rpcServiceConfig = RpcServiceConfig.builder()
                 .group("test2").version("version2").service(helloService2).build();
         nettyRpcServer.registerService(rpcServiceConfig);
+        // start
         nettyRpcServer.start();
     }
 }

@@ -92,19 +92,19 @@
         │   │           ├── config
         │   │           │   ├── CustomShutdownHook.java
         │   │           │   └── RpcServiceConfig.java
-        │   │           ├── loadbalance
+        │   │           ├── loadbalance                                         -- 服务发现负载均衡
         │   │           │   ├── AbstractLoadBalance.java
         │   │           │   ├── LoadBalance.java
         │   │           │   └── loadbalancer
         │   │           │       ├── ConsistentHashLoadBalance.java
         │   │           │       └── RandomLoadBalance.java
-        │   │           ├── provider
+        │   │           ├── provider                                           -- 服务提供
         │   │           │   ├── ServiceProvider.java
         │   │           │   └── impl
         │   │           │       └── ZkServiceProviderImpl.java
         │   │           ├── proxy
         │   │           │   └── RpcClientProxy.java
-        │   │           ├── registry
+        │   │           ├── registry                                            -- 服务注册与发现
         │   │           │   ├── ServiceDiscovery.java
         │   │           │   ├── ServiceRegistry.java
         │   │           │   └── zk

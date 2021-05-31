@@ -45,6 +45,7 @@ public class NettyRpcServer {
     private final ServiceProvider serviceProvider = SingletonFactory.getInstance(ZkServiceProviderImpl.class);
 
     public void registerService(RpcServiceConfig rpcServiceConfig) {
+        // 发布服务
         serviceProvider.publishService(rpcServiceConfig);
     }
 

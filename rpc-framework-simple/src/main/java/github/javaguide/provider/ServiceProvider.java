@@ -22,6 +22,7 @@ public interface ServiceProvider {
     Object getService(String rpcServiceName);
 
     /**
+     * 发布服务
      * @param rpcServiceConfig rpc service related attributes
      */
     void publishService(RpcServiceConfig rpcServiceConfig);

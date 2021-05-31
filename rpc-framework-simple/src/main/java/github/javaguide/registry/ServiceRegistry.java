@@ -6,6 +6,7 @@ import java.net.InetSocketAddress;
 
 /**
  * service registration
+ * 服务注册
  *
  * @author shuang.kou
  * @createTime 2020年05月13日 08:39:00
