@@ -22,9 +22,11 @@ import java.util.concurrent.CompletableFuture;
  * Dynamic proxy class.
  * When a dynamic proxy object calls a method, it actually calls the following invoke method.
  * It is precisely because of the dynamic proxy that the remote method called by the client is like calling the local method (the intermediate process is shielded)
+ * RPC客户端代理，当动态代理对象被调用时，会调用下方的的{@link #invoke(Object, Method, Object[])}方法.
  *
  * @author shuang.kou
  * @createTime 2020年05月10日 19:01:00
+ *
  */
 @Slf4j
 public class RpcClientProxy implements InvocationHandler {

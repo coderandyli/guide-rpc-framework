@@ -18,6 +18,9 @@ public class GzipCompress implements Compress {
 
     private static final int BUFFER_SIZE = 1024 * 4;
 
+    /**
+     * 压缩
+     */
     @Override
     public byte[] compress(byte[] bytes) {
         if (bytes == null) {
@@ -34,6 +37,9 @@ public class GzipCompress implements Compress {
         }
     }
 
+    /**
+     * 解压
+     */
     @Override
     public byte[] decompress(byte[] bytes) {
         if (bytes == null) {

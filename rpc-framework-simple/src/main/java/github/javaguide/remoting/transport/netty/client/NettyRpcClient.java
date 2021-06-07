@@ -29,6 +29,7 @@ import io.netty.handler.timeout.IdleStateHandler;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
+import java.lang.reflect.Method;
 import java.net.InetSocketAddress;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
@@ -93,6 +94,12 @@ public final class NettyRpcClient implements RpcRequestTransport {
         return completableFuture.get();
     }
 
+    /**
+     * In order to send rpc message, {@link github.javaguide.proxy.RpcClientProxy#invoke(Object, Method, Object[])} invke this method.
+     *
+     * @param rpcRequest message body
+     * @return
+     */
     @Override
     public Object sendRpcRequest(RpcRequest rpcRequest) {
         // build return value

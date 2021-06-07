@@ -11,6 +11,7 @@ import java.lang.annotation.Target;
 
 /**
  * scan custom annotations
+ * 自定义包扫描
  *
  * @author shuang.kou
  * @createTime 2020年08月10日 21:42:00
